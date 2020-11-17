@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath,mathpazo}
+\newcommand{\deriv}[2][x]{\frac{\mathrm{d}#2}{\mathrm{d}#1}}
+
+\begin{document}
+
+	\begin{align*}
+		F_{hkl} =& \hspace{0.2cm} f_{o}  (e^{2 \pi i (0)} 
+		+ e^{2 \pi i (0 + \frac{k}{2} + \frac{l}{2}))} 
+		+ e^{2 \pi i (\frac{h}{2} + 0 + \frac{l}{2})} 
+		+ e^{2 \pi i (\frac{h}{2} + \frac{k}{2}0)})  \\
+		 &+ f_{Li} (e^{2 \pi i (\frac{h}{4} + \frac{k}{4} + \frac{l}{4})}  
+		 + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{k}{4} + \frac{l}{4})} 
+		 + e^{2 \pi i (\frac{h}{4} + \frac{3 \cdot k}{4} + \frac{l}{4})} 
+		 + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{3 \cdot k}{4} + \frac{l}{4})} \\
+		 &+ e^{2 \pi i (\frac{h}{4} + \frac{k}{4} + \frac{3 \cdot l}{4})}
+		  + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{k}{4} + \frac{3 \cdot l}{4})} 
+		  + e^{2 \pi i (\frac{h}{4} + \frac{3 \cdot k}{4} + \frac{3 \cdot l}{4})} 
+		  + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{3k}{4} + \frac{3 \cdot l}{4})} \\
+		=& \hspace{0.2cm} f_{o}  (e^{2 \pi i (0)} 
+		+ e^{2 \pi i (0 + \frac{1}{2} + \frac{1}{2}))} 
+		+ e^{2 \pi i (\frac{1}{2} + 0 + \frac{1}{2})} 
+		+ e^{2 \pi i (\frac{1}{2} + \frac{1}{2}0)})  \\
+		&+ f_{Li} (e^{2 \pi i (\frac{1}{4} + \frac{1}{4} + \frac{1}{4})}  
+		+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{1}{4} + \frac{1}{4})} 
+		+ e^{2 \pi i (\frac{1}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} 
+		+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} \\
+		&+ e^{2 \pi i (\frac{1}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})}
+		+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})} 
+		+ e^{2 \pi i (\frac{1}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})} 
+		+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{31}{4} + \frac{3 \cdot 1}{4})} \\
+	\end{align*}
+\end{document}
