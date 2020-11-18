@@ -1,0 +1,503 @@
+\documentclass{article}
+\usepackage{amsmath,mathpazo,tikz}
+\newcommand{\deriv}[2][x]{\frac{\mathrm{d}#2}{\mathrm{d}#1}}
+\begin{document}
+	\noindent\rule{8cm}{0.4pt}
+	\begin{align*}
+		F_{hkl} =& \hspace{0.2cm} f_{o}  (e^{2 \pi i (0)} 
+		+ e^{2 \pi i (0 + \frac{k}{2} + \frac{l}{2}))} 
+		+ e^{2 \pi i (\frac{h}{2} + 0 + \frac{l}{2})} 
+		+ e^{2 \pi i (\frac{h}{2} + \frac{k}{2} + 0)})  \\
+		 &+ f_{Li} (e^{2 \pi i (\frac{h}{4} + \frac{k}{4} + \frac{l}{4})}  
+		 + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{k}{4} + \frac{l}{4})} 
+		 + e^{2 \pi i (\frac{h}{4} + \frac{3 \cdot k}{4} + \frac{l}{4})} 
+		 + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{3 \cdot k}{4} + \frac{l}{4})} \\
+		 &+ e^{2 \pi i (\frac{h}{4} + \frac{k}{4} + \frac{3 \cdot l}{4})}
+		  + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{k}{4} + \frac{3 \cdot l}{4})} 
+		  + e^{2 \pi i (\frac{h}{4} + \frac{3 \cdot k}{4} + \frac{3 \cdot l}{4})} 
+		  + e^{2 \pi i (\frac{3 \cdot h}{4} + \frac{3 \ cdot k}{4} + \frac{3 \cdot l}{4})} \\
+	\end{align*}
+
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{111} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{1}{2} + \frac{1}{2}))} 
+	+ e^{2 \pi i (\frac{1}{2} + 0 + \frac{1}{2})} 
+	+ e^{2 \pi i (\frac{1}{2} + \frac{1}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{1}{4} + \frac{1}{4} + \frac{1}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{1}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} \\
+	&+ e^{2 \pi i (\frac{1}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{1}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (1)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{4})}  
+	+ e^{2 \pi i (\frac{5}{4})} 
+	+ e^{2 \pi i (\frac{5}{4})} 
+	+ e^{2 \pi i (\frac{7}{4})} \\
+	&+ e^{2 \pi i (\frac{5}{4})}
+	+ e^{2 \pi i (\frac{7}{4})} 
+	+ e^{2 \pi i (\frac{7}{4})} 
+	+ e^{2 \pi i (\frac{9}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((-i) + (i) + (i) + (-i) + (i) + (-i) + (-i) + (i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{200} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{0}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{2}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{2}{2} + \frac{0}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{2}{4} + \frac{0}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{2}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (1)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{1}{2})}  
+	+ e^{2 \pi i (\frac{3}{2})} 
+	+ e^{2 \pi i (\frac{1}{2})} 
+	+ e^{2 \pi i (\frac{3}{2})} \\
+	&+ e^{2 \pi i (\frac{1}{2})}
+	+ e^{2 \pi i (\frac{3}{2})} 
+	+ e^{2 \pi i (\frac{1}{2})} 
+	+ e^{2 \pi i (\frac{3}{2})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(-1 + -1 + -1 + -1 + -1 + -1 + -1 + -1) \\
+	=& \hspace{0.2cm} 4f_{o}   - 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{220} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{2}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{2}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{2}{2} + \frac{2}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{2}{4} + \frac{2}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{2}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (2)})  \\
+	&+ f_{Li} (e^{2 \pi i (1)}  
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)} \\
+	&+ e^{2 \pi i (1)}
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+	=& \hspace{0.2cm} 4f_{o}   + 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{311} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{1}{2} + \frac{1}{2}))} 
+	+ e^{2 \pi i (\frac{3}{2} + 0 + \frac{1}{2})} 
+	+ e^{2 \pi i (\frac{3}{2} + \frac{1}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{4} + \frac{1}{4} + \frac{1}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} \\
+	&+ e^{2 \pi i (\frac{3}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{5}{4})}  
+	+ e^{2 \pi i (\frac{11}{4})} 
+	+ e^{2 \pi i (\frac{7}{4})} 
+	+ e^{2 \pi i (\frac{13}{4})} \\
+	&+ e^{2 \pi i (\frac{7}{4})}
+	+ e^{2 \pi i (\frac{13}{4})} 
+	+ e^{2 \pi i (\frac{9}{4})} 
+	+ e^{2 \pi i (\frac{15}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((i) + (-i) + (-i) + (i) + (-i) + (i) + (i) + (-i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{222} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{2}{2} + \frac{2}{2}))} 
+	+ e^{2 \pi i (\frac{2}{2} + 0 + \frac{2}{2})} 
+	+ e^{2 \pi i (\frac{2}{2} + \frac{2}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{2}{4} + \frac{2}{4} + \frac{2}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{2}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 2}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4} + \frac{2}{4})} \\
+	&+ e^{2 \pi i (\frac{2}{4} + \frac{2}{4} + \frac{3 \cdot 2}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{2}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{2}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{2})}  
+	+ e^{2 \pi i (\frac{5}{2})} 
+	+ e^{2 \pi i (\frac{5}{2})} 
+	+ e^{2 \pi i (\frac{7}{2})} \\
+	&+ e^{2 \pi i (\frac{5}{2})}
+	+ e^{2 \pi i (\frac{7}{2})} 
+	+ e^{2 \pi i (\frac{7}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(-1 + -1 + -1 + -1 + -1 + -1 + -1 + -1) \\
+	=& \hspace{0.2cm} 4f_{o}   - 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{400} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{0}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{4}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{4}{2} + \frac{0}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{4}{4} + \frac{0}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{4}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)})  \\
+	&+ f_{Li} (e^{2 \pi i (1)}  
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (3)} \\
+	&+ e^{2 \pi i (1)}
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (3)}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+	=& \hspace{0.2cm} 4f_{o}   + 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{331} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{3}{2} + \frac{1}{2}))} 
+	+ e^{2 \pi i (\frac{3}{2} + 0 + \frac{1}{2})} 
+	+ e^{2 \pi i (\frac{3}{2} + \frac{3}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{4} + \frac{3}{4} + \frac{1}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 3}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4} + \frac{1}{4})} \\
+	&+ e^{2 \pi i (\frac{3}{4} + \frac{3}{4} + \frac{3 \cdot 1}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{7}{4})}  
+	+ e^{2 \pi i (\frac{13}{4})} 
+	+ e^{2 \pi i (\frac{13}{4})} 
+	+ e^{2 \pi i (\frac{19}{4})} \\
+	&+ e^{2 \pi i (\frac{9}{4})}
+	+ e^{2 \pi i (\frac{15}{4})} 
+	+ e^{2 \pi i (\frac{15}{4})} 
+	+ e^{2 \pi i (\frac{21}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((-i) + (i) + (i) + (-i) + (i) + (-i) + (-i) + (i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{420} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{2}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{4}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{4}{2} + \frac{2}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{4}{4} + \frac{2}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{4}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{2})}  
+	+ e^{2 \pi i (\frac{7}{2})} 
+	+ e^{2 \pi i (\frac{5}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})} \\
+	&+ e^{2 \pi i (\frac{3}{2})}
+	+ e^{2 \pi i (\frac{7}{2})} 
+	+ e^{2 \pi i (\frac{5}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(-1 + -1 + -1 + -1 + -1 + -1 + -1 + -1) \\
+	=& \hspace{0.2cm} 4f_{o}   - 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{422} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{2}{2} + \frac{2}{2}))} 
+	+ e^{2 \pi i (\frac{4}{2} + 0 + \frac{2}{2})} 
+	+ e^{2 \pi i (\frac{4}{2} + \frac{2}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{4}{4} + \frac{2}{4} + \frac{2}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{2}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 2}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4} + \frac{2}{4})} \\
+	&+ e^{2 \pi i (\frac{4}{4} + \frac{2}{4} + \frac{3 \cdot 2}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{2}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 2}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (2)}  
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (5)} \\
+	&+ e^{2 \pi i (3)}
+	+ e^{2 \pi i (5)} 
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (6)}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+	=& \hspace{0.2cm} 4f_{o}   + 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{333} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{3}{2} + \frac{3}{2}))} 
+	+ e^{2 \pi i (\frac{3}{2} + 0 + \frac{3}{2})} 
+	+ e^{2 \pi i (\frac{3}{2} + \frac{3}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{4} + \frac{3}{4} + \frac{3}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3}{4} + \frac{3}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 3}{4} + \frac{3}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4} + \frac{3}{4})} \\
+	&+ e^{2 \pi i (\frac{3}{4} + \frac{3}{4} + \frac{3 \cdot 3}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3}{4} + \frac{3 \cdot 3}{4})} 
+	+ e^{2 \pi i (\frac{3}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 3}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{9}{4})}  
+	+ e^{2 \pi i (\frac{15}{4})} 
+	+ e^{2 \pi i (\frac{15}{4})} 
+	+ e^{2 \pi i (\frac{21}{4})} \\
+	&+ e^{2 \pi i (\frac{15}{4})}
+	+ e^{2 \pi i (\frac{21}{4})} 
+	+ e^{2 \pi i (\frac{21}{4})} 
+	+ e^{2 \pi i (\frac{27}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((i) + (-i) + (-i) + (i) + (-i) + (i) + (i) + (-i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{511} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{1}{2} + \frac{1}{2}))} 
+	+ e^{2 \pi i (\frac{5}{2} + 0 + \frac{1}{2})} 
+	+ e^{2 \pi i (\frac{5}{2} + \frac{1}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{5}{4} + \frac{1}{4} + \frac{1}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{5}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3 \cdot 1}{4} + \frac{1}{4})} \\
+	&+ e^{2 \pi i (\frac{5}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{5}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3 \cdot 1}{4} + \frac{3 \cdot 1}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{7}{4})}  
+	+ e^{2 \pi i (\frac{17}{4})} 
+	+ e^{2 \pi i (\frac{9}{4})} 
+	+ e^{2 \pi i (\frac{19}{4})} \\
+	&+ e^{2 \pi i (\frac{9}{4})}
+	+ e^{2 \pi i (\frac{19}{4})} 
+	+ e^{2 \pi i (\frac{11}{4})} 
+	+ e^{2 \pi i (\frac{21}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((-i) + (i) + (i) + (-i) + (i) + (-i) + (-i) + (i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{440} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{4}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{4}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{4}{2} + \frac{4}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{4}{4} + \frac{4}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{4}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 4}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 4}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{4}{4} + \frac{4}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{4}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 4}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 4}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (4)})  \\
+	&+ f_{Li} (e^{2 \pi i (2)}  
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (6)} \\
+	&+ e^{2 \pi i (2)}
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (4)} 
+	+ e^{2 \pi i (6)}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+	=& \hspace{0.2cm} 4f_{o}   + 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{531} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{3}{2} + \frac{1}{2}))} 
+	+ e^{2 \pi i (\frac{5}{2} + 0 + \frac{1}{2})} 
+	+ e^{2 \pi i (\frac{5}{2} + \frac{3}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{5}{4} + \frac{3}{4} + \frac{1}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{5}{4} + \frac{3 \cdot 3}{4} + \frac{1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3 \cdot 3}{4} + \frac{1}{4})} \\
+	&+ e^{2 \pi i (\frac{5}{4} + \frac{3}{4} + \frac{3 \cdot 1}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{5}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 5}{4} + \frac{3 \cdot 3}{4} + \frac{3 \cdot 1}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (2)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (4)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{9}{4})}  
+	+ e^{2 \pi i (\frac{19}{4})} 
+	+ e^{2 \pi i (\frac{15}{4})} 
+	+ e^{2 \pi i (\frac{25}{4})} \\
+	&+ e^{2 \pi i (\frac{11}{4})}
+	+ e^{2 \pi i (\frac{21}{4})} 
+	+ e^{2 \pi i (\frac{17}{4})} 
+	+ e^{2 \pi i (\frac{27}{4})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}((i) + (-i) + (-i) + (i) + (-i) + (i) + (i) + (-i)) \\
+	=& \hspace{0.2cm} 4f_{o} 
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{442} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{4}{2} + \frac{2}{2}))} 
+	+ e^{2 \pi i (\frac{4}{2} + 0 + \frac{2}{2})} 
+	+ e^{2 \pi i (\frac{4}{2} + \frac{4}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{4}{4} + \frac{4}{4} + \frac{2}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{4}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 4}{4} + \frac{2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 4}{4} + \frac{2}{4})} \\
+	&+ e^{2 \pi i (\frac{4}{4} + \frac{4}{4} + \frac{3 \cdot 2}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{4}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{4}{4} + \frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 4}{4} + \frac{3 \cdot 4}{4} + \frac{3 \cdot 2}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (4)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{5}{2})}  
+	+ e^{2 \pi i (\frac{9}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})} 
+	+ e^{2 \pi i (\frac{13}{2})} \\
+	&+ e^{2 \pi i (\frac{7}{2})}
+	+ e^{2 \pi i (\frac{11}{2})} 
+	+ e^{2 \pi i (\frac{11}{2})} 
+	+ e^{2 \pi i (\frac{15}{2})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(-1 + -1 + -1 + -1 + -1 + -1 + -1 + -1) \\
+	=& \hspace{0.2cm} 4f_{o}   - 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{600} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{0}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{6}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{6}{2} + \frac{0}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{6}{4} + \frac{0}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{6}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{3 \cdot 0}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{6}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{6}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{3 \cdot 0}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (3)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{3}{2})}  
+	+ e^{2 \pi i (\frac{9}{2})} 
+	+ e^{2 \pi i (\frac{3}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})} \\
+	&+ e^{2 \pi i (\frac{3}{2})}
+	+ e^{2 \pi i (\frac{9}{2})} 
+	+ e^{2 \pi i (\frac{3}{2})} 
+	+ e^{2 \pi i (\frac{9}{2})}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(-1 + -1 + -1 + -1 + -1 + -1 + -1 + -1) \\
+	=& \hspace{0.2cm} 4f_{o}   - 8f_{Li}
+\end{align*}
+
+\noindent\rule{12cm}{0.4pt}
+\begin{align*}
+	F_{620} =& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (0 + \frac{2}{2} + \frac{0}{2}))} 
+	+ e^{2 \pi i (\frac{6}{2} + 0 + \frac{0}{2})} 
+	+ e^{2 \pi i (\frac{6}{2} + \frac{2}{2} + 0)})  \\
+	&+ f_{Li} (e^{2 \pi i (\frac{6}{4} + \frac{2}{4} + \frac{0}{4})}  
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{6}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{3 \cdot 2}{4} + \frac{0}{4})} \\
+	&+ e^{2 \pi i (\frac{6}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})}
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{6}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})} 
+	+ e^{2 \pi i (\frac{3 \cdot 6}{4} + \frac{3 \cdot 2}{4} + \frac{3 \cdot 0}{4})}) \\  
+	=& \hspace{0.2cm}  f_{o}  (e^{2 \pi i (0)} 
+	+ e^{2 \pi i (1)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (4)})  \\
+	&+ f_{Li} (e^{2 \pi i (2)}  
+	+ e^{2 \pi i (5)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (6)} \\
+	&+ e^{2 \pi i (2)}
+	+ e^{2 \pi i (5)} 
+	+ e^{2 \pi i (3)} 
+	+ e^{2 \pi i (6)}) \\
+	=& \hspace{0.2cm}  f_{o}  (1  + 1 + 1 + 1) + f_{Li}(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+	=& \hspace{0.2cm} 4f_{o}   + 8f_{Li}
+\end{align*}
+
+
+\end{document}
