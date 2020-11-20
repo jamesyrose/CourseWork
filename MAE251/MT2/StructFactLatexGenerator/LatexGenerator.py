@@ -7,7 +7,13 @@ def create_latex_file(data, reflections, name="temp.txt"):
     master_string = """
     \\documentclass{article}
     \\usepackage{changepage, amsmath,mathpazo,tikz}
+    \\usepackage{pdflscape}
+    \\usepackage%
+    [%
+    a4paper
+    ]{geometry}
     \\begin{document}
+    \\begin{landscape}
         \\begin{align*} 
         Coordinates \\\\
     """
@@ -26,8 +32,8 @@ def create_latex_file(data, reflections, name="temp.txt"):
         s1, s2, s3 = create_simplified_eq(data, r)
 
         master_string += expanded + s1 + s2 + s3
-        master_string += "\n \\end{align*} \n" + horiz_line
-    master_string +=  "\n \\end{document}"
+        master_string += "\n \\end{align*} \n \\newpage \n " + horiz_line
+    master_string +=  "\n\\end{landscape}\n \\end{document}"
     with open(name, "w") as f:
         f.writelines(master_string)
         f.close()
@@ -35,15 +41,15 @@ def create_latex_file(data, reflections, name="temp.txt"):
 
 if __name__ == "__main__":
     # Test
-    data = {"Ag": [(0, 0, 0), (0, 1 / 2, 1 / 4), (1 / 2, 0, 3 / 4), (1 / 2, 1 / 2, 1 / 2)],
-            "Al": [(1 / 2, 1 / 2, 0), (1 / 2, 0, 1 / 4), (0, 0, 1 / 2), (0, 1 / 2, 3 / 4)],
-            "Te": [(1 / 4, 1 / 4, 1 / 8), (3 / 4, 3 / 4, 1 / 8), (3 / 4, 1 / 4, 3 / 8), (1 / 4, 3 / 4, 3 / 8),
-                   (3 / 4, 3 / 4, 5 / 8), (1 / 4, 1 / 4, 5 / 8), (3 / 4, 1 / 4, 7 / 8), (1 / 4, 3 / 4, 7 / 8)]}
-    reflections = [(0, 0, 2), (0, 1, 1), (1, 1, 0), (1, 1, 2), (0, 1, 3), (0, 2, 0), (0, 0, 4), (0, 2, 2), (2, 1, 1),
-                   (1, 1, 4), (1, 2, 3), (2, 2, 0),
-                   (0, 1, 5), (0, 2, 4), (2, 2, 2), (0, 3, 1), (3, 1, 0), (3, 1, 2), (1, 2, 5), (3, 2, 1), (1, 3, 4),
-                   (2, 3, 3), (0, 4, 0), (0, 4, 2),
-                   (4, 1, 1), (3, 3, 2), (4, 1, 3), (4, 2, 0), (2, 3, 5), (3, 3, 4), (1, 4, 5), (2, 4, 4), (4, 3, 1),
-                   (0, 5, 1), (5, 1, 0), (5, 1, 2),
-                   (0, 0, 0)]
-    create_latex_file(data, reflections, name="test.txt")
+    data = {"Co": [(1/3, 2/3, 1/6), (1,1,1/2), (2/3, 1/3, 5/6)],
+            "O": [(0, 0, 0.23958700), (2/3,1/3, 0.09374633), (2/3, 1/3, 0.57292033), (1/3, 2/3, 0.42707967), #[(0, 0, 23959/100000), (2/3,1/3, 9375/100000), (2/3, 1/3, 57292/100000), (1/3, 2/3, 42708/100000),
+                  (1/3, 2/3, 0.90625367), (0,0,0.76041300)],# (1/3, 2/3, 90625/100000), (0,0,76041/100000)],
+            "Li": [(0,0,0), (2/3, 1/3, 1/3), (1/3,2/3, 2/3)]}
+    reflections = [ (-2, 1,0)]# (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (1, 0, 0), (1, 0, 1), (1, 0, 2), (1, 0, 3),
+                   # (2, 1, 0), (1, 1, 1), (1, 1, 2), (1, 1, 3), (2, 0, 0), (2, 0, 1), (2, 0, 2), (2, 0, 3),
+                    #(2, 1, 0), (2, 1, 1), (2, 1, 2), (2, 1, 3), (3, 0, 0), (3, 0, 1), (3, 0, 2)]
+
+
+    # reflections = hkl_gen(5)
+    create_latex_file(data, reflections, name="FullLiCoO2.txt")
+
