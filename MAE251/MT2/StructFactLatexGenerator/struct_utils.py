@@ -1,7 +1,29 @@
 import math
 import numpy as np
-from fractions import Fraction
+from fractions import Fraction as Fra
 
+
+class fractObj():
+    def __init__(self, n, d):
+        self.n = n
+        self.d = d
+
+    @property
+    def numerator(self):
+        return self.n
+
+    @property
+    def denominator(self):
+        return self.d
+
+
+def Fraction(x):
+    buff = Fra(x).limit_denominator(100000)
+    n, d = buff.numerator, buff.denominator
+    if n > 1e2:
+        return fractObj(round(x, 8), 1)
+    else:
+        return fractObj(n, d)
 
 def exponentTermLatex(coords, indicies=["h", "k", "l"], simple=False):
     """ exp term e^(2 pi i (h*a + k *b + l * c))
@@ -110,9 +132,9 @@ def create_simplified_term(name, coords, reflection):
         if exp_term % 1 == 0:
             term = f"e^{{2  \pi i({int(exp_term)})}}"
         else:
-            exp_term = Fraction(exp_term)
-            n, d = exp_term.numerator, exp_term.denominator
-            term = f"e^{{2 \pi i (\\frac{n}{d})}}"
+            buff_frac = Fraction(exp_term)
+            n, d = buff_frac.numerator, buff_frac.denominator
+            term = f"e^{{2 \pi i (\\frac{{{n}}}{{{d}}})}}"
         # More Simplified term  (compute exponents to complex)
         r, i = compute_exp(exp_term)
         real += r  # adding for the final results
@@ -210,7 +232,7 @@ def create_simplified_eq(data, reflection):
         else:
             comp += "\\\\\n& + \\hspace{0.2cm}" + computed
         if simp_comp == "":
-            simp_comp = simplified_computed.strip("+").strip("-").strip("+")
+            simp_comp = simplified_computed.strip("+")
         else:
             if simplified_computed.strip() != "":
                 simp_comp += simplified_computed
@@ -229,7 +251,10 @@ def tuple_to_latex(t):
     for i in t:
         if i%1 != 0:
             i = Fraction(i)
-            buff = f"\\frac{i.numerator}{i.denominator}"
+            if i.denominator == 1:
+                buff = f"{i.numerator}"
+            else:
+                buff = f"\\frac{{{i.numerator}}}{{{i.denominator}}}"
         else:
             buff = str(int(i))
         if final == "" :
@@ -256,3 +281,12 @@ def create_tuple_list(l):
             s += t_latex
         cnt += 1
     return s
+
+def hkl_gen(x):
+    """ x is range"""
+    ref = []
+    for h in range( x + 1):
+        for k in range(x  + 1):
+            for l in range(x + 1):
+                ref.append((h, k,l))
+    return ref
