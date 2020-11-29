@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import os
 
 
 class NetflixRec:
-    def __init__(self, df, rz, z, movieTitles):
+    def __init__(self, df: np.array, rz: np.array, z: list, movieTitles: list):
         self._df, self._rz, self._z, self._movieTitles = df, rz, z, movieTitles
         self.logLikeHist = []  # log likelihood history
 
@@ -25,7 +24,7 @@ class NetflixRec:
         assert self._rz.shape[0] == self.__j  # P(R|Z) should have rows = num Movies
         assert self._rz.shape[1] == self.__k  # P(R|Z) show have cols = num hidden variables
 
-    def __prob_Rz(self, movie, zi):
+    def __prob_Rz(self, movie: str, zi: int) -> float:
         """
         P(R = r | zi )
         movie = movie name (str)
@@ -33,7 +32,7 @@ class NetflixRec:
         """
         return self._rz[movie][zi]
 
-    def __prob_R(self, ratings):
+    def __prob_R(self, ratings: list) -> float:
         """
         P(R=r)
         Probability likes the movie as a product of the movies they've seen
@@ -51,7 +50,7 @@ class NetflixRec:
             total += self._z[i] * buff
         return total
 
-    def __eStep(self, ratings):
+    def __eStep(self, ratings: list):
         """
         E step
         Compute P(Z|R)
@@ -65,13 +64,12 @@ class NetflixRec:
                 if rating == 1:
                     pzi *= self._rz[movieIdx][i]
                 elif rating == 0:
-                    pzi *= (1-self._rz[movieIdx][i])
+                    pzi *= (1 - self._rz[movieIdx][i])
             zUpdate.append(pzi)
         self.zUpdate = [buff / sum(zUpdate) for buff in zUpdate]  # list: P(Z=i| R=movie)
         self.zup = [self.zup[idx] + self.zUpdate[idx] for idx in self.__KS]
 
-
-    def __mStep(self, ratings):
+    def __mStep(self, ratings: list):
         """
         M step
         P(Rk = 1| Z=i)
@@ -88,7 +86,36 @@ class NetflixRec:
                 elif rating == 1:
                     self.rzup[movieIdx][i] += self.zUpdate[i]
 
-    def meanPopularity(self):
+    def getMovieTitles(self) -> list:
+        return self._movieTitles
+
+    def getRZ(self) -> np.array:
+        """
+        P(R=1 | Z =i)
+        :return:
+        """
+        return self._rz
+
+    def getZ(self) -> np.array:
+        """
+        P(Z=i)
+        :return:
+        """
+        return self._z
+
+    def getLogHist(self) -> list:
+        return self.logLikeHist
+
+    def plotLogLikeHist(self):
+        import matplotlib.pyplot as plt
+        plt.figure(figsize=(15, 15))
+        plt.plot(self.logLikeHist)
+        plt.xlabel("Iteration")
+        plt.ylabel("Log Likelihood")
+        plt.title("Log Likelihood vs  Itteration")
+        plt.savefig("logLikelihood.png")
+
+    def meanPopularity(self) -> pd.DataFrame:
         """
         Displays mean popularity  of movies (sorted)
         :return:
@@ -100,16 +127,19 @@ class NetflixRec:
             buff = [rating for rating in buff if rating != "?"]
             mean_rating = sum(buff) / len(buff)
             movie = self._movieTitles[mov]
-            moviePop[mean_rating] = "\033[1m%s:\033[0m average rating of %0.4f" % (movie, mean_rating)
+            moviePop[movie] = mean_rating
+            # moviePop[mean_rating] = "\033[1m%s:\033[0m average rating of %0.4f" % (
+            # movie, mean_rating)
 
-        pops = sorted(moviePop.keys())
-        stringBuilder = ""
-        for p in pops:
-            stringBuilder += "\n" + moviePop[p]
-        print(stringBuilder)
-        return stringBuilder
+        meanRating = pd.DataFrame.from_dict(data=moviePop, orient="index", columns=["rating"])
+        meanRating.sort_values("rating", ascending=True, inplace=True)
+        # Print ratings
+        for movie in meanRating.index:
+            rating = meanRating.loc[movie, "rating"]
+            print("\033[1m%s:\033[0m average rating of %0.4f" % (movie, rating))
+        return meanRating
 
-    def computeAndUpdate(self, itter: int = 16):
+    def computeAndUpdate(self, itter: int = 128):
         """
         Computes log likelihood and updates P(z=i) and P(R=1|z=i)
         :param itter: num itterations
@@ -137,6 +167,46 @@ class NetflixRec:
 
             self.logLikeHist.append(logLike / self.__T)
 
+    def makeRecomendations(self, resp: list) -> pd.DataFrame:
+        """
+        resp should be list with 1 = like, 0 = dislike, ? = Hasnt watched
+
+        Gives user suggestions based on prior responses
+
+        :param resp: user ratings of movies seen + if not seen
+        :return: pd.DataFrame
+        """
+        # Checking to make sure ratings is the correct length
+        assert len(resp) == self.__j
+
+        # Computing coefficients
+        pzr = []
+        for i in self.__KS:
+            pzi = self._z[i]
+            for rating, movieIdx in zip(resp, self.__JS):
+                if rating == 1:
+                    pzi *= self.__prob_Rz(movieIdx, i)
+                elif rating == 0:
+                    pzi *= (1 - self.__prob_Rz(movieIdx, i))
+            pzr.append(pzi)
+        pzr = [pzi / sum(pzr) for pzi in pzr]
+
+        # rating suggestions
+        results = {}
+        for rating, movieIdx in zip(resp, self.__JS):
+            title = self._movieTitles[movieIdx]
+            buff = 0
+            if rating == "?":
+                for i in self.__KS:
+                    buff += pzr[i] * self.__prob_Rz(movieIdx, i)
+                results[title] = buff
+
+        suggestions = pd.DataFrame.from_dict(data=results, orient="index", columns=["rating"])
+        suggestions.sort_values("rating", ascending=False, inplace=True)
+        return suggestions
+
+
+
 
 if __name__ == "__main__":
     # Sample data
@@ -158,3 +228,15 @@ if __name__ == "__main__":
     rec = NetflixRec(df, rz, z, titles)
 
     rec.meanPopularity()
+    rec.computeAndUpdate(itter=128)
+    ratings = [1, '?', '?', '?', 1, '?', 1, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?',
+              '?', '?', '?', '?', 0, 1, 1, '?', '?', '?', '?', 1, 1, 0, '?', '?', '?', 0,
+              '?', '?', '?', '?', 1, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?',
+              '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', 1, '?',
+              '?', '?', '?', '?', '?', '?', '?', '?', 1]
+
+    recs = rec.makeRecomendations(ratings)
+    print(recs)
+
+
+
