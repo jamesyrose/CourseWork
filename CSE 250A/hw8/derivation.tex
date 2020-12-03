@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath,mathpazo,tikz}
+\newcommand{\deriv}[2][x]{\frac{\mathrm{d}#2}{\mathrm{d}#1}}
+\begin{document}
+	
+\section{Likilihood}
+\begin{align*}
+&\text{Where } \Omega \text{ are the movies seen by the individual}\\
+&\text{Where } j \text{ is the movie}\\
+&\text{Where } T \text{ are the number of individuals}\\
+&\text{Where } i \text{ is a hidden variable}
+\end{align*}
+\begin{align*}
+P(\{R_j=r_j\}_{j\in \Omega }) & = \sum_{i=1}^k P(Z=i, {\{R_j=r_j\}_{j\in \Omega }}) \\
+& = \sum_{i=1}^k P({\{R_j=r_j\}_{j\in \Omega }} | Z=i) P(Z=i) \\
+& = \sum_{i=1}^k P(Z=i) \prod_{j\in \Omega } P({\{R_j=r_j\}_{j\in \Omega }} | Z=i) 
+\end{align*}
+\section{Expectation (E-Step)}
+\begin{align*}
+P(Z=i | {\{R_j=r_j\}_{j\in \Omega }}) &= \frac{P(Z=i)  P({\{R_j=r_j\}_{j\in \Omega }} | Z=i)}{P(\{R_j=r_j\}_{j\in \Omega })} \\
+&=\frac{P(Z=i) \prod_{j\in \Omega } P({\{R_j=r_j\}_{j\in \Omega }} | Z=i)}{\sum_{i'=1}^k P(Z=i') \prod_{j\in \Omega } P({\{R_j=r_j\}_{j\in \Omega }} | Z=i')  }
+\end{align*}
+\section{Maximization (M-Step)}
+\subsection{Hidden Variable Updates}
+\begin{align*}
+	P(Z=i) \leftarrow&  \frac{1}{T} \sum_{t=1}^{T} P(\{R_j=r_j^t\}_{j\in \Omega} \\
+\end{align*}
+\subsection{Observed Rating Probability Updates}
+\begin{align*}
+	P(R_l=1|Z=i) \leftarrow& \frac{\sum_t P(Z=i, R_l=1 |  {\{R_j=r_j\}_{j\in \Omega })}}{ \sum_{t=1}^{T}P(\{R_j=r_j^t\}_{j\in \Omega}}\\\\
+	P(Z=i, R_l=1 |  {\{R_j=r_j\}_{j\in \Omega })}=& I(R_l, 1)P(Z=i, R_l=1 | {\{R_j=r_j\}_{j\in \Omega }}) \\
+	=& I(R_l, 1)P(Z=i | {\{R_j=r_j\}_{j\in \Omega }})P(Z=i | R_l=1, {\{R_j=r_j\}_{j\in \Omega }})\\
+	=&  I(R_l, 1)P(Z=i | {\{R_j=r_j\}_{j\in \Omega }})P(R_l=1|Z=i) \\\\
+	\rho_{it} =& P(Z=i | {\{R_j=r_j\}_{j\in \Omega }})\\
+	P(R_l=1|Z=i) \leftarrow& \frac{\sum_{t|l \in \Omega} I(R_l, 1)\rho_{it}  + \sum_{t|l \notin \Omega} P(R_l=1 |Z=i)\rho_{it}     }{ \sum_{t=1}^{T}P(\{R_j=r_j^t\}_{j\in \Omega}}\\\\
+\end{align*}
+\end{document}
