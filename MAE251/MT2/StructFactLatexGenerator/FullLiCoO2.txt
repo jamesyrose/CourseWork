@@ -1,0 +1,459 @@
+
+    \documentclass{article}
+    \usepackage{changepage, amsmath,mathpazo,tikz}
+    \usepackage{pdflscape}
+    \usepackage%
+    [%
+    a4paper
+    ]{geometry}
+    \begin{document}
+    \begin{landscape}
+        \begin{align*} 
+        Coordinates \\
+    Co :& \hspace{0.2cm} (\frac{1}{3},\frac{2}{3},\frac{1}{6}),(1,1,\frac{1}{2}),(\frac{2}{3},\frac{1}{3},\frac{5}{6}) \\ 
+O :& \hspace{0.2cm} (0,0,0.239587),(\frac{2}{3},\frac{1}{3},0.09374633),(\frac{2}{3},\frac{1}{3},0.57292033),(\frac{1}{3},\frac{2}{3},0.42707967),(\frac{1}{3},\frac{2}{3},0.90625367),(0,0,0.760413) \\ 
+Li :& \hspace{0.2cm} (0,0,0),(\frac{2}{3},\frac{1}{3},\frac{1}{3}),(\frac{1}{3},\frac{2}{3},\frac{2}{3}) \\ 
+Reflections :& \hspace{0.2cm} (-2,1,0),(0,0,1),(0,0,2),(0,0,3),(0,0,4),(1,0,0),\\ & \hspace{0.2cm}(1,0,1),(1,0,2),(1,0,3),(2,1,0),(1,1,1),(1,1,2),\\ & \hspace{0.2cm}(1,1,3),(2,0,0),(2,0,1),(2,0,2),(2,0,3),(2,1,0),\\ & \hspace{0.2cm}(2,1,1),(2,1,2),(2,1,3),(3,0,0),(3,0,1),(3,0,2) \\ 
+ \end{align*} 
+        \noindent\rule{8cm}{0.4pt}
+        \begin{align*} 
+    F_{hkl} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{l}{6})} + e^{2 \pi i(h + k + \frac{l}{2})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{5 \cdot l}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot l}{1})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{0.09374633 \cdot l}{1})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{0.57292033 \cdot l}{1})} + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{0.42707967 \cdot l}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{0.90625367 \cdot l}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot l}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{l}{3})} + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{2 \cdot l}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{l}{6})} + e^{2 \pi i(h + k + \frac{l}{2})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{5 \cdot l}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot l}{1})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{0.09374633 \cdot l}{1})} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{0.57292033 \cdot l}{1})} + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{0.42707967 \cdot l}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{0.90625367 \cdot l}{1})} + e^{2 \pi i(\frac{0.760413 \cdot l}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot h}{3} + \frac{k}{3} + \frac{l}{3})} + e^{2 \pi i(\frac{h}{3} + \frac{2 \cdot k}{3} + \frac{2 \cdot l}{3})})\\
+ \end{align*} 
+\noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{-210} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(-2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(-2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot -2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{-2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2  \pi i(0)} + e^{2  \pi i(-1)} + e^{2  \pi i(-1)})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2  \pi i(-1)} + e^{2  \pi i(-1)} + e^{2  \pi i(0)}\\
+& + e^{2  \pi i(0)} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(-1)} + e^{2  \pi i(0)}) \\=& \hspace{0.2cm}f_{Co}(1 + 1 + 1)\\
+& + \hspace{0.2cm}f_{O}(1 + 1 + 1 + 1 + 1 + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm} 3f_{Co}+ 6f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{001} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(0 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(0 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{1}{6})} + e^{2 \pi i (\frac{1}{2})} + e^{2 \pi i (\frac{5}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{0.09374633}{1})} + e^{2 \pi i (\frac{0.57292033}{1})} + e^{2 \pi i (\frac{0.42707967}{1})}\\
+& + e^{2 \pi i (\frac{0.90625367}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{1}{3})} + e^{2 \pi i (\frac{2}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (0.86603)i] + -1 + [0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [0.83148 + (0.55555)i]\\ 
+ & \hspace{0.2cm} + [-0.89686 + (-0.44231)i] + [-0.89686 + (0.44231)i]\\ 
+ & \hspace{0.2cm} + [0.83148 + (-0.55555)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm} 4.743458070777251e-09f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{002} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(0 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(0 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{1}{3})} + e^{2  \pi i(1)} + e^{2 \pi i (\frac{5}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{0.18749266}{1})} + e^{2 \pi i (\frac{1.14584066}{1})} + e^{2 \pi i (\frac{0.85415934}{1})}\\
+& + e^{2 \pi i (\frac{1.81250734}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{2}{3})} + e^{2 \pi i (\frac{4}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [0.38273 + (0.92386)i]\\ 
+ & \hspace{0.2cm} + [0.60872 + (0.79338)i] + [0.60872 + (-0.79338)i]\\ 
+ & \hspace{0.2cm} + [0.38273 + (-0.92386)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm} 1.438634354977708e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{003} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(0 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(0 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{1}{2})} + e^{2 \pi i (\frac{3}{2})} + e^{2 \pi i (\frac{5}{2})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.718761}{1})} + e^{2 \pi i (\frac{0.28123899}{1})} + e^{2 \pi i (\frac{1.71876099}{1})} + e^{2 \pi i (\frac{1.28123901}{1})}\\
+& + e^{2 \pi i (\frac{2.71876101}{1})} + e^{2 \pi i (\frac{2.281239}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(1)} + e^{2  \pi i(2)}) \\=& \hspace{0.2cm}f_{Co}(-1 + -1 + -1)\\
+& + \hspace{0.2cm}f_{O}([-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i]\\ 
+ & \hspace{0.2cm} + [-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i]\\ 
+ & \hspace{0.2cm} + [-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm}- 3f_{Co}- 1.170135207227543f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{004} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{4}{6})} + e^{2 \pi i(0 + 0 + \frac{4}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 4}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 4}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 4}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 4}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 4}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 4}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 4}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{4}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 4}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{4}{6})} + e^{2 \pi i(0 + 0 + \frac{4}{2})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{5 \cdot 4}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 4}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 4}{1})} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 4}{1})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 4}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 4}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 4}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 0}{3} + \frac{0}{3} + \frac{4}{3})} + e^{2 \pi i(\frac{0}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 4}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{2}{3})} + e^{2  \pi i(2)} + e^{2 \pi i (\frac{10}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.958348}{1})} + e^{2 \pi i (\frac{0.37498532}{1})} + e^{2 \pi i (\frac{2.29168132}{1})} + e^{2 \pi i (\frac{1.70831868}{1})}\\
+& + e^{2 \pi i (\frac{3.62501468}{1})} + e^{2 \pi i (\frac{3.041652}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{8}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (-0.86603)i] + 1 + [-0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([0.96595 + (-0.25873)i] + [-0.70704 + (0.70717)i]\\ 
+ & \hspace{0.2cm} + [-0.25891 + (0.9659)i] + [-0.25891 + (-0.9659)i]\\ 
+ & \hspace{0.2cm} + [-0.70704 + (-0.70717)i] + [0.96595 + (0.25873)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm} 2.803262317829791e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{100} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(1 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(1 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{1}{3})} + e^{2  \pi i(1)} + e^{2 \pi i (\frac{2}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{2}{3})} + e^{2 \pi i (\frac{2}{3})} + e^{2 \pi i (\frac{1}{3})}\\
+& + e^{2 \pi i (\frac{1}{3})} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{2}{3})} + e^{2 \pi i (\frac{1}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (-0.86603)i]\\ 
+ & \hspace{0.2cm} + [-0.5 + (0.86603)i] + [-0.5 + (0.86603)i]\\ 
+ & \hspace{0.2cm} + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm}0 (Forbidden Reflection) \\ \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{101} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(1 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(1 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{1}{2})} + e^{2 \pi i (\frac{3}{2})} + e^{2 \pi i (\frac{3}{2})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{0.760413}{1})} + e^{2 \pi i (\frac{1.239587}{1})} + e^{2 \pi i (\frac{0.760413}{1})}\\
+& + e^{2 \pi i (\frac{1.239587}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(1)} + e^{2  \pi i(1)}) \\=& \hspace{0.2cm}f_{Co}(-1 + -1 + -1)\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i]\\ 
+ & \hspace{0.2cm} + [0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i]\\ 
+ & \hspace{0.2cm} + [0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm}- 3f_{Co}+ 0.39228084116117606f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{102} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(1 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(1 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{2}{3})} + e^{2  \pi i(2)} + e^{2 \pi i (\frac{7}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{0.85415933}{1})} + e^{2 \pi i (\frac{1.81250733}{1})} + e^{2 \pi i (\frac{1.18749267}{1})}\\
+& + e^{2 \pi i (\frac{2.14584067}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{5}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (-0.86603)i] + 1 + [-0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [0.60872 + (-0.79338)i]\\ 
+ & \hspace{0.2cm} + [0.38273 + (-0.92386)i] + [0.38273 + (0.92386)i]\\ 
+ & \hspace{0.2cm} + [0.60872 + (0.79338)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm}- 1.4386343782923916e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{103} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(1 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(1 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{5}{6})} + e^{2 \pi i (\frac{5}{2})} + e^{2 \pi i (\frac{19}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.718761}{1})} + e^{2 \pi i (\frac{0.94790566}{1})} + e^{2 \pi i (\frac{2.38542766}{1})} + e^{2 \pi i (\frac{1.61457234}{1})}\\
+& + e^{2 \pi i (\frac{3.05209434}{1})} + e^{2 \pi i (\frac{2.281239}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{7}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (-0.86603)i] + -1 + [0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.19502 + (-0.9808)i] + [0.94691 + (-0.3215)i]\\ 
+ & \hspace{0.2cm} + [-0.75189 + (0.65929)i] + [-0.75189 + (-0.65929)i]\\ 
+ & \hspace{0.2cm} + [0.94691 + (0.3215)i] + [-0.19502 + (0.9808)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm} 4.2447808795698094e-08f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{210} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(3)} + e^{2 \pi i (\frac{5}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{4}{3})}\\
+& + e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{4}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (-0.86603)i]\\ 
+ & \hspace{0.2cm} + [-0.5 + (0.86603)i] + [-0.5 + (0.86603)i]\\ 
+ & \hspace{0.2cm} + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm}0 (Forbidden Reflection) \\ \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{111} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{1}{6})} + e^{2 \pi i(1 + 1 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{1}{6})} + e^{2 \pi i(1 + 1 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{7}{6})} + e^{2 \pi i (\frac{5}{2})} + e^{2 \pi i (\frac{11}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{1.09374633}{1})} + e^{2 \pi i (\frac{1.57292033}{1})} + e^{2 \pi i (\frac{1.42707967}{1})}\\
+& + e^{2 \pi i (\frac{1.90625367}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{5}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (0.86603)i] + -1 + [0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [0.83148 + (0.55555)i]\\ 
+ & \hspace{0.2cm} + [-0.89686 + (-0.44231)i] + [-0.89686 + (0.44231)i]\\ 
+ & \hspace{0.2cm} + [0.83148 + (-0.55555)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm} 4.743456849531924e-09f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{112} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2}{6})} + e^{2 \pi i(1 + 1 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2}{6})} + e^{2 \pi i(1 + 1 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(3)} + e^{2 \pi i (\frac{8}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{1.18749266}{1})} + e^{2 \pi i (\frac{2.14584066}{1})} + e^{2 \pi i (\frac{1.85415934}{1})}\\
+& + e^{2 \pi i (\frac{2.81250734}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{7}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [0.38273 + (0.92386)i]\\ 
+ & \hspace{0.2cm} + [0.60872 + (0.79338)i] + [0.60872 + (-0.79338)i]\\ 
+ & \hspace{0.2cm} + [0.38273 + (-0.92386)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm} 1.4386343150096792e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{113} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{3}{6})} + e^{2 \pi i(1 + 1 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{3}{6})} + e^{2 \pi i(1 + 1 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 1}{3} + \frac{1}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{1}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{3}{2})} + e^{2 \pi i (\frac{7}{2})} + e^{2 \pi i (\frac{7}{2})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.718761}{1})} + e^{2 \pi i (\frac{1.28123899}{1})} + e^{2 \pi i (\frac{2.71876099}{1})} + e^{2 \pi i (\frac{2.28123901}{1})}\\
+& + e^{2 \pi i (\frac{3.71876101}{1})} + e^{2 \pi i (\frac{2.281239}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(2)} + e^{2  \pi i(3)}) \\=& \hspace{0.2cm}f_{Co}(-1 + -1 + -1)\\
+& + \hspace{0.2cm}f_{O}([-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i]\\ 
+ & \hspace{0.2cm} + [-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i]\\ 
+ & \hspace{0.2cm} + [-0.19502 + (-0.9808)i] + [-0.19502 + (0.9808)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm}- 3f_{Co}- 1.1701352072275424f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{200} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{2}{3})} + e^{2  \pi i(2)} + e^{2 \pi i (\frac{4}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{2}{3})}\\
+& + e^{2 \pi i (\frac{2}{3})} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{4}{3})} + e^{2 \pi i (\frac{2}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (-0.86603)i] + 1 + [-0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}(1 + [-0.5 + (0.86603)i] + [-0.5 + (0.86603)i]\\ 
+ & \hspace{0.2cm} + [-0.5 + (-0.86603)i] + [-0.5 + (-0.86603)i]\\ 
+ & \hspace{0.2cm} + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm}0 (Forbidden Reflection) \\ \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{201} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(2 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(2 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{5}{6})} + e^{2 \pi i (\frac{5}{2})} + e^{2 \pi i (\frac{13}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{1.42707966}{1})} + e^{2 \pi i (\frac{1.90625366}{1})} + e^{2 \pi i (\frac{1.09374634}{1})}\\
+& + e^{2 \pi i (\frac{1.57292034}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{4}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (-0.86603)i] + -1 + [0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [-0.89686 + (0.44231)i]\\ 
+ & \hspace{0.2cm} + [0.83148 + (-0.55555)i] + [0.83148 + (0.55555)i]\\ 
+ & \hspace{0.2cm} + [-0.89686 + (-0.44231)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm}- 4.743459625089486e-09f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{202} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(2 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(2 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2  \pi i(1)} + e^{2  \pi i(3)} + e^{2  \pi i(3)})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{1.52082599}{1})} + e^{2 \pi i (\frac{2.47917399}{1})} + e^{2 \pi i (\frac{1.52082601}{1})}\\
+& + e^{2 \pi i (\frac{2.47917401}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(2)} + e^{2  \pi i(2)}) \\=& \hspace{0.2cm}f_{Co}(1 + 1 + 1)\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [-0.99145 + (-0.13048)i]\\ 
+ & \hspace{0.2cm} + [-0.99145 + (0.13048)i] + [-0.99145 + (-0.13048)i]\\ 
+ & \hspace{0.2cm} + [-0.99145 + (0.13048)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm} 3f_{Co}- 5.948705247219291f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{203} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(2 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{3}{6})} + e^{2 \pi i(2 + 0 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{0}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{7}{6})} + e^{2 \pi i (\frac{7}{2})} + e^{2 \pi i (\frac{23}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.718761}{1})} + e^{2 \pi i (\frac{1.61457232}{1})} + e^{2 \pi i (\frac{3.05209432}{1})} + e^{2 \pi i (\frac{1.94790568}{1})}\\
+& + e^{2 \pi i (\frac{3.38542768}{1})} + e^{2 \pi i (\frac{2.281239}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{7}{3})} + e^{2 \pi i (\frac{8}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (0.86603)i] + -1 + [0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.19502 + (-0.9808)i] + [-0.75189 + (-0.65929)i]\\ 
+ & \hspace{0.2cm} + [0.94691 + (0.3215)i] + [0.94691 + (-0.3215)i]\\ 
+ & \hspace{0.2cm} + [-0.75189 + (0.65929)i] + [-0.19502 + (0.9808)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm}- 4.244781040552148e-08f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{210} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0}{6})} + e^{2 \pi i(2 + 1 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(3)} + e^{2 \pi i (\frac{5}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{4}{3})}\\
+& + e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{5}{3})} + e^{2 \pi i (\frac{4}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (-0.86603)i]\\ 
+ & \hspace{0.2cm} + [-0.5 + (0.86603)i] + [-0.5 + (0.86603)i]\\ 
+ & \hspace{0.2cm} + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm}0 (Forbidden Reflection) \\ \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{211} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{1}{6})} + e^{2 \pi i(2 + 1 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{1}{6})} + e^{2 \pi i(2 + 1 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{3}{2})} + e^{2 \pi i (\frac{7}{2})} + e^{2 \pi i (\frac{5}{2})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{1.760413}{1})} + e^{2 \pi i (\frac{2.239587}{1})} + e^{2 \pi i (\frac{1.760413}{1})}\\
+& + e^{2 \pi i (\frac{2.239587}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{2}{1})} + e^{2  \pi i(2)}) \\=& \hspace{0.2cm}f_{Co}(-1 + -1 + -1)\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i]\\ 
+ & \hspace{0.2cm} + [0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i]\\ 
+ & \hspace{0.2cm} + [0.06538 + (0.99786)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm}- 3f_{Co}+ 0.3922808411611796f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{212} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2}{6})} + e^{2 \pi i(2 + 1 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2}{6})} + e^{2 \pi i(2 + 1 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{5}{3})} + e^{2  \pi i(4)} + e^{2 \pi i (\frac{10}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{1.85415933}{1})} + e^{2 \pi i (\frac{2.81250733}{1})} + e^{2 \pi i (\frac{2.18749267}{1})}\\
+& + e^{2 \pi i (\frac{3.14584067}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{7}{3})} + e^{2 \pi i (\frac{8}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (-0.86603)i] + 1 + [-0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [0.60872 + (-0.79338)i]\\ 
+ & \hspace{0.2cm} + [0.38273 + (-0.92386)i] + [0.38273 + (0.92386)i]\\ 
+ & \hspace{0.2cm} + [0.60872 + (0.79338)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm}- 1.438634393835514e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{213} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{3}{6})} + e^{2 \pi i(2 + 1 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{3}{6})} + e^{2 \pi i(2 + 1 + \frac{3}{2})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{5 \cdot 3}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.09374633 \cdot 3}{1})} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{0.57292033 \cdot 3}{1})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.42707967 \cdot 3}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{0.90625367 \cdot 3}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 3}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 2}{3} + \frac{1}{3} + \frac{3}{3})} + e^{2 \pi i(\frac{2}{3} + \frac{2 \cdot 1}{3} + \frac{2 \cdot 3}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{11}{6})} + e^{2 \pi i (\frac{9}{2})} + e^{2 \pi i (\frac{25}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.718761}{1})} + e^{2 \pi i (\frac{1.94790566}{1})} + e^{2 \pi i (\frac{3.38542766}{1})} + e^{2 \pi i (\frac{2.61457234}{1})}\\
+& + e^{2 \pi i (\frac{4.05209434}{1})} + e^{2 \pi i (\frac{2.281239}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{8}{3})} + e^{2 \pi i (\frac{10}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (-0.86603)i] + -1 + [0.5 + (0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.19502 + (-0.9808)i] + [0.94691 + (-0.3215)i]\\ 
+ & \hspace{0.2cm} + [-0.75189 + (0.65929)i] + [-0.75189 + (-0.65929)i]\\ 
+ & \hspace{0.2cm} + [0.94691 + (0.3215)i] + [-0.19502 + (0.9808)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm} 4.2447806575252045e-08f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{300} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(3 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0}{6})} + e^{2 \pi i(3 + 0 + \frac{0}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 0}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 0}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 0}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 0}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 0}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 0}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 0}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2  \pi i(1)} + e^{2  \pi i(3)} + e^{2  \pi i(2)})\\
+& + \hspace{0.2cm}f_{O}(e^{2  \pi i(0)} + e^{2  \pi i(2)} + e^{2  \pi i(2)} + e^{2  \pi i(1)}\\
+& + e^{2  \pi i(1)} + e^{2  \pi i(0)})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2  \pi i(2)} + e^{2  \pi i(1)}) \\=& \hspace{0.2cm}f_{Co}(1 + 1 + 1)\\
+& + \hspace{0.2cm}f_{O}(1 + 1 + 1 + 1 + 1 + 1)\\
+& + \hspace{0.2cm}f_{Li}(1 + 1 + 1) \\=& \hspace{0.2cm} 3f_{Co}+ 6f_{O}+ 3f_{Li} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{301} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(3 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{1}{6})} + e^{2 \pi i(3 + 0 + \frac{1}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 1}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 1}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 1}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 1}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 1}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 1}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{1}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 1}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{7}{6})} + e^{2 \pi i (\frac{7}{2})} + e^{2 \pi i (\frac{17}{6})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.239587}{1})} + e^{2 \pi i (\frac{2.09374633}{1})} + e^{2 \pi i (\frac{2.57292033}{1})} + e^{2 \pi i (\frac{1.42707967}{1})}\\
+& + e^{2 \pi i (\frac{1.90625367}{1})} + e^{2 \pi i (\frac{0.760413}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{7}{3})} + e^{2 \pi i (\frac{5}{3})}) \\=& \hspace{0.2cm}f_{Co}([0.5 + (0.86603)i] + -1 + [0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([0.06538 + (0.99786)i] + [0.83148 + (0.55555)i]\\ 
+ & \hspace{0.2cm} + [-0.89686 + (-0.44231)i] + [-0.89686 + (0.44231)i]\\ 
+ & \hspace{0.2cm} + [0.83148 + (-0.55555)i] + [0.06538 + (-0.99786)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (0.86603)i] + [-0.5 + (-0.86603)i]) \\=& \hspace{0.2cm} 4.743456405442714e-09f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+\begin{align*} 
+F_{302} =& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(3 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(0 + 0 + \frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(0 + 0 + \frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0 + 0 + 0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm} f_{Co} (e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2}{6})} + e^{2 \pi i(3 + 0 + \frac{2}{2})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{5 \cdot 2}{6})}) \\ 
+ & + f_{O} (e^{2 \pi i(\frac{0.239587 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.09374633 \cdot 2}{1})} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{0.57292033 \cdot 2}{1})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.42707967 \cdot 2}{1})}\\ 
+ & \hspace{0.2cm}  + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{0.90625367 \cdot 2}{1})} + e^{2 \pi i(\frac{0.760413 \cdot 2}{1})}) \\ 
+ & + f_{Li} (e^{2 \pi i(0)} + e^{2 \pi i(\frac{2 \cdot 3}{3} + \frac{0}{3} + \frac{2}{3})} + e^{2 \pi i(\frac{3}{3} + \frac{2 \cdot 0}{3} + \frac{2 \cdot 2}{3})})\\=& \hspace{0.2cm}f_{Co}(e^{2 \pi i (\frac{4}{3})} + e^{2  \pi i(4)} + e^{2 \pi i (\frac{11}{3})})\\
+& + \hspace{0.2cm}f_{O}(e^{2 \pi i (\frac{0.479174}{1})} + e^{2 \pi i (\frac{2.18749266}{1})} + e^{2 \pi i (\frac{3.14584066}{1})} + e^{2 \pi i (\frac{1.85415934}{1})}\\
+& + e^{2 \pi i (\frac{2.81250734}{1})} + e^{2 \pi i (\frac{1.520826}{1})})\\
+& + \hspace{0.2cm}f_{Li}(e^{2  \pi i(0)} + e^{2 \pi i (\frac{8}{3})} + e^{2 \pi i (\frac{7}{3})}) \\=& \hspace{0.2cm}f_{Co}([-0.5 + (0.86603)i] + 1 + [-0.5 + (-0.86603)i])\\
+& + \hspace{0.2cm}f_{O}([-0.99145 + (0.13048)i] + [0.38273 + (0.92386)i]\\ 
+ & \hspace{0.2cm} + [0.60872 + (0.79338)i] + [0.60872 + (-0.79338)i]\\ 
+ & \hspace{0.2cm} + [0.38273 + (-0.92386)i] + [-0.99145 + (-0.13048)i])\\
+& + \hspace{0.2cm}f_{Li}(1 + [-0.5 + (-0.86603)i] + [-0.5 + (0.86603)i]) \\=& \hspace{0.2cm} 1.4386343161199022e-07f_{O} \\
+ \end{align*} 
+ \newpage 
+ \noindent\rule{8cm}{0.4pt} 
+
+\end{landscape}
+ \end{document}

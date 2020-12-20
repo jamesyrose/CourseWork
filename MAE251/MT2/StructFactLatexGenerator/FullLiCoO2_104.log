@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.25)  18 NOV 2020 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.25)  1 DEC 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**test.txt
-(./test.txt
+**FullLiCoO2_104.txt
+(./FullLiCoO2_104.txt
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -390,22 +390,57 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-))) (./test.aux)
-\openout1 = `test.aux'.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 4.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count120
+\Gm@cntv=\count121
+\c@Gm@tempcnt=\count122
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks32
+)
+(./FullLiCoO2_104.aux)
+\openout1 = `FullLiCoO2_104.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -413,17 +448,17 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen160
+\scratchcounter=\count123
+\scratchdimen=\dimen168
 \scratchbox=\box39
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen161
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks33
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen169
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -460,10 +495,6 @@ Package etexcmds Info: Could not find \expanded.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -480,241 +511,86 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 5.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 11.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 11.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 5.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 11.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-Overfull \hbox (87.21pt too wide) detected at line 11
-[]
- []
+) [1
 
 
-Overfull \hbox (21.3198pt too wide) detected at line 21
-[]
- []
-
-
-Overfull \hbox (25.18098pt too wide) detected at line 38
-[]
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (25.18098pt too wide) detected at line 55
-[]
- []
-
-[2]
-Overfull \hbox (25.18098pt too wide) detected at line 70
-[]
- []
-
-[3]
-Overfull \hbox (25.18098pt too wide) detected at line 87
-[]
- []
-
-[4]
-Overfull \hbox (25.18098pt too wide) detected at line 104
-[]
- []
-
-[5]
-Overfull \hbox (25.18098pt too wide) detected at line 120
-[]
- []
-
-[6]
-Overfull \hbox (25.18098pt too wide) detected at line 137
-[]
- []
-
-[7]
-Overfull \hbox (25.18098pt too wide) detected at line 154
-[]
- []
-
-[8]
-Overfull \hbox (25.18098pt too wide) detected at line 171
-[]
- []
-
-[9]
-Overfull \hbox (25.18098pt too wide) detected at line 188
-[]
- []
-
-[10]
-Overfull \hbox (25.18098pt too wide) detected at line 205
-[]
- []
-
-[11]
-Overfull \hbox (25.18098pt too wide) detected at line 220
-[]
- []
-
-[12]
-Overfull \hbox (25.18098pt too wide) detected at line 237
-[]
- []
-
-[13]
-Overfull \hbox (25.18098pt too wide) detected at line 254
-[]
- []
-
-[14]
-Overfull \hbox (25.18098pt too wide) detected at line 271
-[]
- []
-
-[15]
-Overfull \hbox (25.18098pt too wide) detected at line 288
-[]
- []
-
-[16]
-Overfull \hbox (25.18098pt too wide) detected at line 304
-[]
- []
-
-[17]
-Overfull \hbox (25.18098pt too wide) detected at line 321
-[]
- []
-
-[18]
-Overfull \hbox (25.18098pt too wide) detected at line 338
-[]
- []
-
-[19]
-Overfull \hbox (25.18098pt too wide) detected at line 355
-[]
- []
-
-[20]
-Overfull \hbox (25.18098pt too wide) detected at line 372
-[]
- []
-
-[21]
-Overfull \hbox (25.18098pt too wide) detected at line 389
-[]
- []
-
-[22]
-Overfull \hbox (25.18098pt too wide) detected at line 405
-[]
- []
-
-[23]
-Overfull \hbox (25.18098pt too wide) detected at line 422
-[]
- []
-
-[24]
-Overfull \hbox (25.18098pt too wide) detected at line 439
-[]
- []
-
-[25]
-Overfull \hbox (25.18098pt too wide) detected at line 456
-[]
- []
-
-[26]
-Overfull \hbox (25.18098pt too wide) detected at line 473
-[]
- []
-
-[27]
-Overfull \hbox (25.18098pt too wide) detected at line 489
-[]
- []
-
-[28]
-Overfull \hbox (25.18098pt too wide) detected at line 506
-[]
- []
-
-[29]
-Overfull \hbox (25.18098pt too wide) detected at line 523
-[]
- []
-
-[30]
-Overfull \hbox (25.18098pt too wide) detected at line 540
-[]
- []
-
-[31]
-Overfull \hbox (25.18098pt too wide) detected at line 557
-[]
- []
-
-[32]
-Overfull \hbox (25.18098pt too wide) detected at line 574
-[]
- []
-
-[33]
-Overfull \hbox (25.18098pt too wide) detected at line 591
-[]
- []
-
-[34]
-Overfull \hbox (25.18098pt too wide) detected at line 607
-[]
- []
-
-[35]
-Overfull \hbox (25.18098pt too wide) detected at line 624
-[]
- []
-
-[36]
-Overfull \hbox (25.18098pt too wide) detected at line 639
-[]
- []
-
-[37] [38] (./test.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8
+] [9] [10]
+[11] [12] [13] [14] (./FullLiCoO2_104.aux) ) 
 Here is how much of TeX's memory you used:
- 12078 strings out of 492982
- 240398 string characters out of 6134896
- 296067 words of memory out of 5000000
- 15393 multiletter control sequences out of 15000+600000
- 17027 words of font info for 48 fonts, out of 8000000 for 9000
+ 12583 strings out of 492982
+ 248035 string characters out of 6134896
+ 307877 words of memory out of 5000000
+ 15881 multiletter control sequences out of 15000+600000
+ 17284 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,454b,130s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
-enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on test.pdf (38 pages, 133847 bytes).
+ 55i,9n,54p,421b,164s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on FullLiCoO2_104.pdf (14 pages, 75017 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 74 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
